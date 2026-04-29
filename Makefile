@@ -2,6 +2,8 @@ NAME = libft.a
 
 CC = cc
 CFLAGS = -Wall -Wextra -Werror
+RM = rm -f
+AR = ar rcs
 
 SRCS = \
 	ft_atoi.c \
@@ -53,16 +55,16 @@ OBJS = $(SRCS:.c=.o)
 all: $(NAME)
 
 $(NAME): $(OBJS)
-	ar rcs $(NAME) $(OBJS)
+	$(AR) $(NAME) $(OBJS)
 
 %.o: %.c libft.h
 	$(CC) $(CFLAGS) -c $< -o $@
 
 clean:
-	rm -f $(OBJS)
+	$(RM) $(OBJS)
 
 fclean: clean
-	rm -f $(NAME)
+	$(RM) $(NAME)
 
 re: fclean all
 
