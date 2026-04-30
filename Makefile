@@ -1,7 +1,7 @@
 NAME = libft.a
 
 CC = cc
-CFLAGS = -Wall -Wextra -Werror
+CFLAGS = -Wall -Wextra -Werror -fPIC
 RM = rm -f
 AR = ar rcs
 
@@ -64,8 +64,19 @@ clean:
 	$(RM) $(OBJS)
 
 fclean: clean
-	$(RM) $(NAME)
+	$(RM) $(NAME) libft.so
 
 re: fclean all
 
-.PHONY: all clean fclean re
+# ==========================
+# BONUS (42 requirement)
+# ==========================
+bonus: $(NAME)
+
+# ==========================
+# libft-unit-test requirement
+# ==========================
+so:
+	$(CC) -shared -o libft.so $(SRCS) $(CFLAGS)
+
+.PHONY: all clean fclean re bonus so
