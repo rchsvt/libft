@@ -1,91 +1,137 @@
-*This activity has been created as part of the 42 curriculum by <rchavast>.*
+<h1 align="center">📚 Libft</h1>
 
-# Libft
+<p align="center">
+  Custom C library developed as part of the 42 curriculum.
+</p>
 
-## Description
+---
 
-Libft is a custom C library developed as part of the 42 curriculum.
+## 📖 About
 
-The goal of this project is to recreate essential functions from the standard C library, as well as implement additional utility functions. This project focuses on understanding low-level programming concepts such as memory management, string manipulation, and data structures.
+Libft is a foundational project from the 42 curriculum.
 
-The result is a static library (libft.a) that can be reused in future C projects.
+The objective is to recreate essential functions from the standard C library while learning:
+- memory management
+- string manipulation
+- pointers
+- data structures
+- low-level programming concepts
 
-## Library Overview
+The final result is a reusable static library:
 
-The library includes three categories of functions:
+```bash
+libft.a
+```
+
+---
+
+## 🚀 Features
 
 ### Libc Functions
+Reimplementation of standard C library functions.
 
-Reimplementation of standard functions:
+Examples:
+- `ft_strlen`
+- `ft_memcpy`
+- `ft_memmove`
+- `ft_strchr`
+- `ft_strdup`
+- `ft_atoi`
 
-- Character checks (ft_isalpha, ft_isdigit, ft_isalnum, etc.)
-- Memory functions (ft_memset, ft_memcpy, ft_memmove, etc.)
-- String functions (ft_strlen, ft_strncmp, ft_strchr, etc.)
-- Conversion and allocation (ft_atoi, ft_calloc, ft_strdup)
+---
 
 ### Additional Functions
 
-Utility functions:
+Utility functions for string manipulation and memory handling.
 
-- ft_substr
-- ft_strjoin
-- ft_strtrim
-- ft_split
-- ft_itoa
-- ft_strmapi
-- ft_striteri
-- ft_putchar_fd
-- ft_putstr_fd
-- ft_putendl_fd
-- ft_putnbr_fd
+Examples:
+- `ft_substr`
+- `ft_strjoin`
+- `ft_split`
+- `ft_strtrim`
+- `ft_itoa`
+
+---
 
 ### Linked List Functions
 
-- ft_lstnew
-- ft_lstadd_front
-- ft_lstsize
-- ft_lstlast
-- ft_lstadd_back
-- ft_lstdelone
-- ft_lstclear
-- ft_lstiter
-- ft_lstmap
+Implementation of linked list utilities.
 
-## Instructions
+Examples:
+- `ft_lstnew`
+- `ft_lstadd_back`
+- `ft_lstclear`
+- `ft_lstmap`
 
-Compilation:
+---
 
+## 🛠️ Compilation
+
+Compile the library:
+
+```bash
 make
+```
 
-Cleaning:
+Clean object files:
 
+```bash
 make clean
-make fclean
-make re
+```
 
-## Usage
+Remove object files and library:
+
+```bash
+make fclean
+```
+
+Recompile everything:
+
+```bash
+make re
+```
+
+---
+
+## 💻 Usage
 
 Include the header:
 
+```c
 #include "libft.h"
+```
 
 Compile with:
 
+```bash
 cc -Wall -Wextra -Werror main.c libft.a
+```
 
-## Resources
+---
 
-- 42 Libft subject
-- Unix manual pages (man)
-- GNU C Library documentation
+## 📂 Project Structure
 
-## AI Usage
+```txt
+libft/
+├── Makefile
+├── libft.h
+├── ft_*.c
+└── libft.a
+```
 
-AI was used as a learning assistant during this project.
+---
 
-It helped with:
-- understanding concepts
-- debugging issues
-- improving code structure
+## 🎯 Skills Learned
 
-All code was written and understood by the student.
+- C programming
+- Memory management
+- Algorithmic thinking
+- Defensive programming
+- Code organization
+- Makefile usage
+
+---
+
+<p align="center">
+  Built at <strong>42 Paris</strong>
+</p>
